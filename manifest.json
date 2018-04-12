@@ -1,0 +1,7 @@
+{
+  "name": "lds-interview",
+  "short_name": "lds-interview",
+  "description": "Lds Job Interview",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="lds-interview-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class LdsInterviewApp extends Polymer.Element {
+      static get is() {
+        return 'lds-interview-app';
+      }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'lds-interview-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(LdsInterviewApp.is, LdsInterviewApp);
+  </script>
+</dom-module>
