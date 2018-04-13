@@ -1,0 +1,61 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="lds-title-single-article">
+  <template>
+    <style>
+      :host {
+        @apply --layout-vertical;
+      }
+
+      page-title {
+        @apply --paper-font-display1;
+        padding: 8px 0;
+      }
+
+      collapsed-article {
+        @apply --layout-horizontal;
+        padding: 16px 0;
+      }
+
+      collapsed-article-headline {
+        @apply --layout-vertical;
+        padding: 0 16px;
+      }
+
+      collapsed-article-headline-text {
+        @apply --paper-font-headline;
+      }
+
+      collapsed-article-headline-title {
+        @apply --paper-font-subhead;
+        color: var(--app-text-secondary-color);
+      }
+
+      collapsed-article-short-description {
+        padding-top: 16px;
+      }
+
+      img {
+        width: auto;
+        height: auto;
+      }
+    </style>
+    <collapsed-article>
+      <collapsed-artile-image>
+        <img src="[[articleData.smallImageUrl]]"></img>
+      </collapsed-artile-image>
+      <collapsed-article-headline>
+        <collapsed-article-headline-title> News Release</collapsed-article-headline-title>
+        <collapsed-article-headline-text>[[articleData.header]]</collapsed-article-headline-text>
+        <collapsed-article-short-description>
+          [[articleData.shortDescription]]
+        </collapsed-article-short-description>
+      </collapsed-article-headline>
+
+    </collapsed-article>
+  </template>
+
+  <script src="lds-title-single-article.js"></script>
+  < /dom-module>

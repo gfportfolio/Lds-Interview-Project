@@ -1,16 +1,26 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="lds-title-single-article.html">
 
 <dom-module id="lds-title">
   <template>
     <style>
       :host {}
+
+      page-title {
+        @apply --paper-font-display1;
+      }
     </style>
 
-    <h2>Title Page</h2>
+    <page-title>Title Page</page-title>
+    <news-articles>
+      <template is="dom-repeat" items="[[sampleData]]">
+        <lds-title-single-article article-data="[[item]]"></lds-title-single-article>
+      </template>
 
   </template>
 
+  <script src="../sample-data/title-sample-data.js"></script>
   <script src="lds-title.js"></script>
   < /dom-module>

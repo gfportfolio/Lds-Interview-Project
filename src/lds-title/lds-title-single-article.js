@@ -2,9 +2,9 @@
  * @customElement
  * @polymer
  */
-class LdsTitle extends Polymer.Element {
+class LdsTitleSingleArticle extends Polymer.Element {
   static get is() {
-    return 'lds-title';
+    return 'lds-title-single-article';
   }
   static get properties() {
     return {
@@ -19,4 +19,4 @@ class LdsTitle extends Polymer.Element {
   }
 }
 
-window.customElements.define(LdsTitle.is, LdsTitle);
+window.customElements.define(LdsTitleSingleArticle.is, LdsTitleSingleArticle);
