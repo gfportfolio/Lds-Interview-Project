@@ -10,22 +10,35 @@
       :host {
         @apply --layout-horizontal;
         @apply --layout-center-justified;
-
+        --app-neon-color: #0466c9;
       }
+
 
       page-body {
         background-color: white;
         @apply --layout-flex;
-
-        max-width: 800px;
+        padding: 16px;
+        max-width: 960px;
       }
 
-      page-content {}
+      paper-tabs {
+        --paper-tabs-selection-bar-color: var(--app-neon-color)
+      }
     </style>
     <page-body>
-      <page-content>
-        <h2>Hello [[prop1]]!</h2>
-      </page-content>
+      <paper-tabs selected="{{page}}" attr-for-selected="name">
+        <paper-tab name="title">Title</paper-tab>
+        <paper-tab name="article">Article</paper-tab>
+      </paper-tabs>
+      <iron-pages selected="{{page}}" attr-for-selected="name">
+        <title-page name="title">
+          <h2>Title Page</h2>
+        </title-page>
+        <artile-page name="article">
+          <h2>Article Page</h2>
+          </article-page>
+      </iron-pages>
+      <h2>Hello [[prop1]]!</h2>
     </page-body>
   </template>
 
