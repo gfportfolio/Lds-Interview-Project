@@ -8,12 +8,13 @@ class LdsInterviewApp extends Polymer.Element {
   }
   static get properties() {
     return {
-      prop1: {
+      page: {
         type: String,
-        value: 'lds-interview-app'
+        value: 'title'
       }
     };
   }
+
 }
 
 window.customElements.define(LdsInterviewApp.is, LdsInterviewApp);

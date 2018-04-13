@@ -4,6 +4,9 @@
 <link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 
+<link rel="import" href="../lds-article/lds-article.html">
+<link rel="import" href="../lds-title/lds-title.html">
+
 <dom-module id="lds-interview-app">
   <template>
     <style>
@@ -31,14 +34,11 @@
         <paper-tab name="article">Article</paper-tab>
       </paper-tabs>
       <iron-pages selected="{{page}}" attr-for-selected="name">
-        <title-page name="title">
-          <h2>Title Page</h2>
-        </title-page>
-        <artile-page name="article">
-          <h2>Article Page</h2>
-          </article-page>
+        <lds-title name="title">
+        </lds-title>
+        <lds-article name="article">
+        </lds-article>
       </iron-pages>
-      <h2>Hello [[prop1]]!</h2>
     </page-body>
   </template>
 
