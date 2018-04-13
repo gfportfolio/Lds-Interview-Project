@@ -1,13 +1,32 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
 
 <dom-module id="lds-interview-app">
   <template>
     <style>
       :host {
-        display: block;
+        @apply --layout-horizontal;
+        @apply --layout-center-justified;
+
       }
+
+      page-body {
+        background-color: white;
+        @apply --layout-flex;
+
+        max-width: 800px;
+      }
+
+      page-content {}
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <page-body>
+      <page-content>
+        <h2>Hello [[prop1]]!</h2>
+      </page-content>
+    </page-body>
   </template>
 
   <script src="lds-interview-app.js"></script>
