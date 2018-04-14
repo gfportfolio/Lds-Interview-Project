@@ -7,13 +7,8 @@
   <template>
     <style>
       :host {}
-
-      page-title {
-        @apply --paper-font-display1;
-      }
     </style>
 
-    <page-title>Title Page</page-title>
     <news-articles>
       <template is="dom-repeat" items="[[sampleData]]">
         <lds-title-single-article article-data="[[item]]"></lds-title-single-article>

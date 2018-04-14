@@ -19,9 +19,13 @@
         padding: 16px 0;
       }
 
+      collapsed-article[video] {
+        @apply --layout-vertical;
+        padding: 16px 0;
+      }
+
       collapsed-article-headline {
         @apply --layout-vertical;
-        padding: 0 16px;
       }
 
       collapsed-article-headline-text {
@@ -37,15 +41,62 @@
         padding-top: 16px;
       }
 
+      collapsed-artile-image {
+        padding-right: 16px;
+      }
+
+      collapsed-artile-video {
+        @apply --layout-horizontal;
+        @apply --layout-center-justified;
+        padding-bottom: 16px;
+
+      }
+
       img {
         width: auto;
         height: auto;
+        cursor: pointer;
+      }
+
+      iframe {
+        height: 450px;
+        width: 600px;
+      }
+
+      [hidden] {
+        display: none;
+      }
+
+      @media (max-width: 650px) {
+        iframe {
+          height: 350px;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 400px) {
+        collapsed-article {
+          @apply --layout-vertical;
+          padding: 16px 0;
+        }
+        collapsed-artile-image {
+          padding: 0 0 16px 0;
+        }
+        iframe {
+          height: 250px;
+          width: 100%;
+
+        }
+
       }
     </style>
-    <collapsed-article>
-      <collapsed-artile-image>
+    <collapsed-article video$="[[viewVideo]]">
+      <collapsed-artile-image on-click="playVideo" hidden$="[[viewVideo]]">
         <img src="[[articleData.smallImageUrl]]"></img>
       </collapsed-artile-image>
+      <collapsed-artile-video hidden$="[[!viewVideo]]">
+        <iframe src="[[articleData.videoLink]]" frameborder="0" allowfullscreen></iframe>
+      </collapsed-artile-video>
       <collapsed-article-headline>
         <collapsed-article-headline-title> News Release</collapsed-article-headline-title>
         <collapsed-article-headline-text>[[articleData.header]]</collapsed-article-headline-text>

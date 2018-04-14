@@ -8,14 +8,20 @@ class LdsTitleSingleArticle extends Polymer.Element {
   }
   static get properties() {
     return {
-      sampleData: {
-        type: Object,
+      viewVideo: {
+        type: Boolean,
+        value: false
       }
     };
   }
   connectedCallback() {
     super.connectedCallback();
     this.sampleData = sampleTitleData;
+  }
+
+  playVideo() {
+    this.viewVideo = true;
+    console.log("click");
   }
 }
 
