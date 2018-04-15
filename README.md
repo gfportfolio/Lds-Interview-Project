@@ -31,3 +31,9 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
+
+
+## ToDo's
+Add bower install to npm post install
+Lazy Import pages
+remove unneeded css on title page
