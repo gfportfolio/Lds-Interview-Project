@@ -8,11 +8,23 @@ class LdsArticleImageSlideshow extends Polymer.Element {
   }
   static get properties() {
     return {
-      largeImageUrl: {
-        type: String,
-        value: 'src/sample-data/images/photo01.jpg'
+      largeImage: {
+        type: Object,
+      },
+      images: {
+        type: Array,
+        observer: '_imagesChanged'
       }
     };
+  }
+  _imagesChanged(images) {
+    if (!images)
+      return;
+    this.largeImage = images[0];
+  }
+  changeImage(element) {
+    let clickedImage = element.currentTarget.dataArgs;
+    this.largeImage = clickedImage;
   }
 }
 

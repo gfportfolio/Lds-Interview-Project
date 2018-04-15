@@ -6,15 +6,32 @@
     <style>
       :host {}
 
-      img {
+      main-image>img {
         width: 100%
+      }
+
+      small-image {
+        cursor: pointer;
+      }
+
+      small-image>img {
+        width: 60px;
       }
     </style>
 
     <main-image>
-      <img src="[[largeImageUrl]]"></img>
+      <img src="[[largeImage.imageSrc]]"></img>
     </main-image>
-
+    <image-details>
+      <image-caption>[[largeImage.caption]]</image-caption>
+      <additional-images>
+        <template is="dom-repeat" items="[[images]]">
+          <small-image on-click="changeImage" data-args="[[item]]">
+            <img src="[[item.imageSrc]]"></img>
+          </small-image>
+        </template>
+      </additional-images>
+    </image-details>
 
   </template>
 

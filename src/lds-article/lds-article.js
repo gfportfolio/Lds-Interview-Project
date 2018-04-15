@@ -8,11 +8,14 @@ class LdsArticle extends Polymer.Element {
   }
   static get properties() {
     return {
-      prop1: {
-        type: String,
-        value: 'lds-title'
+      sampleData: {
+        type: Object,
       }
     };
+  }
+  connectedCallback() {
+    super.connectedCallback();
+    this.sampleData = sampleArticleData;
   }
 }
 
