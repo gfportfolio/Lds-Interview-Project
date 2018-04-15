@@ -14,38 +14,38 @@
         padding: 8px 0;
       }
 
-      collapsed-article {
+      title-article {
         @apply --layout-horizontal;
         padding: 16px 0;
       }
 
-      collapsed-article[video] {
+      title-article[video] {
         @apply --layout-vertical;
         padding: 16px 0;
       }
 
-      collapsed-article-headline {
+      title-article-headline {
         @apply --layout-vertical;
       }
 
-      collapsed-article-headline-text {
+      title-article-headline-text {
         @apply --paper-font-headline;
       }
 
-      collapsed-article-headline-title {
+      title-article-headline-title {
         @apply --paper-font-subhead;
         color: var(--app-text-secondary-color);
       }
 
-      collapsed-article-short-description {
+      title-article-short-description {
         padding-top: 16px;
       }
 
-      collapsed-artile-image {
+      title-artile-image {
         padding-right: 16px;
       }
 
-      collapsed-artile-video {
+      title-artile-video {
         @apply --layout-horizontal;
         @apply --layout-center-justified;
         padding-bottom: 16px;
@@ -75,11 +75,11 @@
       }
 
       @media (max-width: 400px) {
-        collapsed-article {
+        title-article {
           @apply --layout-vertical;
           padding: 16px 0;
         }
-        collapsed-artile-image {
+        title-artile-image {
           padding: 0 0 16px 0;
         }
         iframe {
@@ -90,22 +90,22 @@
 
       }
     </style>
-    <collapsed-article video$="[[viewVideo]]">
-      <collapsed-artile-image on-click="playVideo" hidden$="[[viewVideo]]">
+    <title-article video$="[[viewVideo]]">
+      <title-artile-image on-click="playVideo" hidden$="[[viewVideo]]">
         <img src="[[articleData.smallImageUrl]]"></img>
-      </collapsed-artile-image>
-      <collapsed-artile-video hidden$="[[!viewVideo]]">
+      </title-artile-image>
+      <title-artile-video hidden$="[[!viewVideo]]">
         <iframe src="[[articleData.videoLink]]" frameborder="0" allowfullscreen></iframe>
-      </collapsed-artile-video>
-      <collapsed-article-headline>
-        <collapsed-article-headline-title> News Release</collapsed-article-headline-title>
-        <collapsed-article-headline-text>[[articleData.header]]</collapsed-article-headline-text>
-        <collapsed-article-short-description>
+      </title-artile-video>
+      <title-article-headline>
+        <title-article-headline-title> News Release</title-article-headline-title>
+        <title-article-headline-text>[[articleData.header]]</title-article-headline-text>
+        <title-article-short-description>
           [[articleData.shortDescription]]
-        </collapsed-article-short-description>
-      </collapsed-article-headline>
+        </title-article-short-description>
+      </title-article-headline>
 
-    </collapsed-article>
+    </title-article>
   </template>
 
   <script src="lds-title-single-article.js"></script>
