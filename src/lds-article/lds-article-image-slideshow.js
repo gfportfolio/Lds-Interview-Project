@@ -14,18 +14,25 @@ class LdsArticleImageSlideshow extends Polymer.Element {
       images: {
         type: Array,
         observer: '_imagesChanged'
+      },
+      additionalImagesOnNewRow: {
+        type: Boolean
       }
     };
   }
+
   _imagesChanged(images) {
     if (!images)
       return;
     this.largeImage = images[0];
   }
-  changeImage(element) {
+
+  _changeImage(element) {
     let clickedImage = element.currentTarget.dataArgs;
     this.largeImage = clickedImage;
+
   }
+
 }
 
 window.customElements.define(LdsArticleImageSlideshow.is, LdsArticleImageSlideshow);

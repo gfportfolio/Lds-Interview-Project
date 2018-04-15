@@ -19,7 +19,7 @@ class LdsTitleSingleArticle extends Polymer.Element {
     this.sampleData = sampleTitleData;
   }
 
-  playVideo() {
+  _playVideo() {
     this.viewVideo = true;
     console.log("click");
   }

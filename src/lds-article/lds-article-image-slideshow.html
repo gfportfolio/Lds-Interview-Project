@@ -4,7 +4,9 @@
 <dom-module id="lds-article-image-slideshow">
   <template>
     <style>
-      :host {}
+      :host {
+        @apply --layout-vertical;
+      }
 
       main-image>img {
         width: 100%
@@ -12,10 +14,29 @@
 
       small-image {
         cursor: pointer;
+        @apply --layout-end-justified;
+
       }
 
       small-image>img {
         width: 60px;
+      }
+
+      image-details {
+        @apply --layout-vertical;
+      }
+
+      additional-images {
+        @apply --layout-flex;
+        @apply --layout-horizontal;
+        @apply --layout-end-justified;
+      }
+
+      image-info {
+        @apply --layout-vertical;
+        @apply --layout-flex;
+
+
       }
     </style>
 
@@ -23,14 +44,17 @@
       <img src="[[largeImage.imageSrc]]"></img>
     </main-image>
     <image-details>
-      <image-caption>[[largeImage.caption]]</image-caption>
-      <additional-images>
+      <additional-images id="additionalImages">
         <template is="dom-repeat" items="[[images]]">
-          <small-image on-click="changeImage" data-args="[[item]]">
+          <small-image on-click="_changeImage" data-args="[[item]]">
             <img src="[[item.imageSrc]]"></img>
           </small-image>
         </template>
       </additional-images>
+      <image-info>
+        <image-title>[[largeImage.title]]</image-title>
+        <image-caption>[[largeImage.caption]]</image-caption>
+      </image-info>
     </image-details>
 
   </template>
