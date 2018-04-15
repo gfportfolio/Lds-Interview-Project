@@ -4,22 +4,26 @@ const sampleArticleData = {
     images: [{
             imageSrc: "src/sample-data/images/photo01.jpg",
             caption: "President Neilson with Elder Holland",
-            title: "image1Title"
+            title: "Image 1 Title",
+            id: 1
         },
         {
             imageSrc: "src/sample-data/images/photo02.jpg",
             caption: "Elder Holland",
-            title: "image2Title"
+            title: "Image 2 Title",
+            id: 2
         },
         {
             imageSrc: "src/sample-data/images/photo03.jpg",
             caption: "Elder Holland with London Missionaries",
-            title: "image3Title"
+            title: "Image 3 Title",
+            id: 3
         },
         {
             imageSrc: "src/sample-data/images/photo04.jpg",
             caption: "President Neilson in London",
-            title: "image4Title"
+            title: "Image 4 Title",
+            id: 4
         }
     ],
     section: {

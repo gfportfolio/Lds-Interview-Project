@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 
 <dom-module id="lds-article-image-slideshow">
   <template>
@@ -15,11 +16,20 @@
       small-image {
         cursor: pointer;
         @apply --layout-end-justified;
+      }
 
+      small-image[selected]>img {
+        border-style: solid;
+        border-color: var(--app-neon-color);
+        border-width: 2px;
       }
 
       small-image>img {
         width: 60px;
+      }
+
+      small-image+small-image {
+        padding: 0 8px;
       }
 
       image-details {
@@ -27,16 +37,21 @@
       }
 
       additional-images {
-        @apply --layout-flex;
-        @apply --layout-horizontal;
         @apply --layout-end-justified;
+        @apply --layout-wrap;
+        padding: 8px 0;
       }
 
       image-info {
         @apply --layout-vertical;
         @apply --layout-flex;
+        padding: 8px 0;
+      }
 
-
+      image-title {
+        padding-bottom: 8px;
+        @apply --paper-font-subhead;
+        font-weight: 600;
       }
     </style>
 
@@ -46,7 +61,7 @@
     <image-details>
       <additional-images id="additionalImages">
         <template is="dom-repeat" items="[[images]]">
-          <small-image on-click="_changeImage" data-args="[[item]]">
+          <small-image on-click="_changeImage" selected$="[[_isSelected(item, largeImage)]]" data-args="[[item]]">
             <img src="[[item.imageSrc]]"></img>
           </small-image>
         </template>

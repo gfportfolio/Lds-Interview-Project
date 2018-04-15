@@ -30,9 +30,11 @@ class LdsArticleImageSlideshow extends Polymer.Element {
   _changeImage(element) {
     let clickedImage = element.currentTarget.dataArgs;
     this.largeImage = clickedImage;
-
   }
 
+  _isSelected(image, largeImage) {
+    return image.id === largeImage.id;
+  }
 }
 
 window.customElements.define(LdsArticleImageSlideshow.is, LdsArticleImageSlideshow);
