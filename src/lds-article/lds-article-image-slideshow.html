@@ -1,16 +1,22 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
-<link rel="import" href="lds-article-image-slideshow.html">
-<dom-module id="lds-article">
+
+<dom-module id="lds-article-image-slideshow">
   <template>
     <style>
       :host {}
+
+      img {
+        width: 100%
+      }
     </style>
 
-    <lds-article-image-slideshow>
-    </lds-article-image-slideshow>
+    <main-image>
+      <img src="[[largeImageUrl]]"></img>
+    </main-image>
+
 
   </template>
 
-  <script src="lds-article.js"></script>
+  <script src="lds-article-image-slideshow.js"></script>
   < /dom-module>

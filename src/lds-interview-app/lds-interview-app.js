@@ -10,7 +10,7 @@ class LdsInterviewApp extends Polymer.Element {
     return {
       page: {
         type: String,
-        value: 'title'
+        value: 'article'
       }
     };
   }
