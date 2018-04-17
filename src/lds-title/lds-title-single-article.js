@@ -1,7 +1,3 @@
-/**
- * @customElement
- * @polymer
- */
 class LdsTitleSingleArticle extends Polymer.Element {
   static get is() {
     return 'lds-title-single-article';

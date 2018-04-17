@@ -2,41 +2,27 @@
 
 Lds Job Interview
 
-## Install the Polymer-CLI
+##To View the Application
+Install NodeJs
+Install polymer-cli globally npm install -g polymer-cli
+Run npm install
+Run polymer build
+Run polymer Serve
 
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) installed. Then run `polymer serve` to serve your application locally.
+## To Run with Browser Sync in Visual Studio Code
+Install NodeJs
+Install polymer-cli globally npm install -g polymer-cli
+Run npm install
+CMD+Shift+B or CTRL+Shirt+B
 
-## Viewing Your Application
-
-```
-$ polymer serve
-```
-
-## Building Your Application
-
-```
-$ polymer build
-```
-
-This will create builds of your application in the `build/` directory, optimized to be served in production. You can then serve the built versions by giving `polymer serve` a folder to serve from:
-
-```
-$ polymer serve build/default
-```
-
-## Running Tests
-
-```
-$ polymer test
-```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
 
 
 ## ToDo's
-fix padding around small images on article slideshow
-Add bower install to npm post install
+Fix padding around small images on article slideshow
+Fix text wrap around youtube video
 Lazy Import pages
-remove unneeded css on title page
+Remove unneeded css on title page
+clean up CSS
 Fix Console Errors
 Put images on article page on right next to title
+Comment Components

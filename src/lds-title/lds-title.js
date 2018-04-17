@@ -1,7 +1,3 @@
-/**
- * @customElement
- * @polymer
- */
 class LdsTitle extends Polymer.Element {
   static get is() {
     return 'lds-title';

@@ -1,7 +1,3 @@
-/**
- * @customElement
- * @polymer
- */
 class LdsArticleImageSlideshow extends Polymer.Element {
   static get is() {
     return 'lds-article-image-slideshow';

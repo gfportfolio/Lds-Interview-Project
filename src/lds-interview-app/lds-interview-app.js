@@ -1,7 +1,3 @@
-/**
- * @customElement
- * @polymer
- */
 class LdsInterviewApp extends Polymer.Element {
   static get is() {
     return 'lds-interview-app';
@@ -10,7 +6,7 @@ class LdsInterviewApp extends Polymer.Element {
     return {
       page: {
         type: String,
-        value: 'article'
+        value: 'title'
       }
     };
   }
