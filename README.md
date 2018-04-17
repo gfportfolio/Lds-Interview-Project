@@ -5,6 +5,7 @@ Lds Job Interview
 ##To View the Application
 Install NodeJs
 Install polymer-cli globally npm install -g polymer-cli
+npm install bower
 Run npm install
 Run bower install
 Run polymer build
@@ -13,6 +14,7 @@ Run polymer serve
 ## To Run with Browser Sync in Visual Studio Code
 Install NodeJs
 Install polymer-cli globally npm install -g polymer-cli
+npm install bower
 Run npm install
 Run bower install
 CMD+Shift+B or CTRL+Shirt+B
