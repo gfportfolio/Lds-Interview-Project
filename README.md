@@ -34,7 +34,7 @@ Your application is already set up to be tested via [web-component-tester](https
 
 
 ## ToDo's
-resize image, have a smaller and larger version and make all images match
+fix padding around small images on article slideshow
 Add bower install to npm post install
 Lazy Import pages
 remove unneeded css on title page

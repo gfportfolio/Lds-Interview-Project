@@ -1,15 +1,57 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+
 <link rel="import" href="lds-article-image-slideshow.html">
 <dom-module id="lds-article">
   <template>
     <style>
-      :host {}
+      :host {
+        @apply --layout-vertical;
+        padding: 0 8px;
+      }
+
+      article-title {
+        @apply --paper-font-display1;
+        padding-bottom: 24px;
+      }
+
+      article-subtitle {
+        @apply --paper-font-subhead;
+        padding: 16px 0;
+      }
+
+      section-body,
+      article-body {
+        @apply --layout-vertical;
+      }
+
+      section-subheading {
+        @apply --paper-font-display1;
+        padding: 16px 0;
+      }
+
+      section-paragraph {
+        padding-bottom: 8px;
+      }
     </style>
-    [[sampleData.subtitle]] [[sampleData.title]]
+    <article-subtitle>[[sampleData.subtitle]]</article-subtitle>
+    <article-title> [[sampleData.title]]</article-title>
     <lds-article-image-slideshow images="[[sampleData.images]]">
     </lds-article-image-slideshow>
-
+    <article-body>
+      <template is="dom-repeat" items="[[sampleData.sections]]" as="section">
+        <template is="dom-if" if="[[section.subheading]]">
+          <section-subheading>[[section.subheading]]</section-subheading>
+        </template>
+        <section-body>
+          <template is="dom-repeat" items="[[section.paragraphs]]" as="paragraph">
+            <section-paragraph>[[paragraph.text]]
+            </section-paragraph>
+          </template>
+        </section-body>
+      </template>
+    </article-body>
   </template>
   <script src="../sample-data/article-sample-data.js"></script>
   <script src="lds-article.js"></script>
