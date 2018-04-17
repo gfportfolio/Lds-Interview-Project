@@ -3,24 +3,28 @@ const sampleArticleData = {
     subtitle: "President Russell M. Nelson and Elder Jeffrey R. Holland",
     images: [{
             imageSrc: "src/sample-data/images/photo01.jpg",
+            smallImageSrc: "src/sample-data/images/photo01small.jpg",
             caption: "President Neilson with Elder Holland",
             title: "Image 1 Title",
             id: 1
         },
         {
             imageSrc: "src/sample-data/images/photo02.jpg",
+            smallImageSrc: "src/sample-data/images/photo02small.jpg",
             caption: "Elder Holland",
             title: "Image 2 Title",
             id: 2
         },
         {
             imageSrc: "src/sample-data/images/photo03.jpg",
+            smallImageSrc: "src/sample-data/images/photo03small.jpg",
             caption: "Elder Holland with London Missionaries",
             title: "Image 3 Title",
             id: 3
         },
         {
             imageSrc: "src/sample-data/images/photo04.jpg",
+            smallImageSrc: "src/sample-data/images/photo04small.jpg",
             caption: "President Neilson in London",
             title: "Image 4 Title",
             id: 4

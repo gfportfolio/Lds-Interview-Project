@@ -62,7 +62,7 @@
       <additional-images id="additionalImages">
         <template is="dom-repeat" items="[[images]]">
           <small-image on-click="_changeImage" selected$="[[_isSelected(item, largeImage)]]" data-args="[[item]]">
-            <img src="[[item.imageSrc]]"></img>
+            <img src="[[item.smallImageSrc]]"></img>
           </small-image>
         </template>
       </additional-images>
