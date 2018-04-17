@@ -3,6 +3,7 @@
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 
 <link rel="import" href="lds-article-image-slideshow.html">
+<link rel="import" href="lds-article-video.html">
 <dom-module id="lds-article">
   <template>
     <style>
@@ -21,8 +22,16 @@
         padding: 16px 0;
       }
 
-      section-body,
       article-body {
+        @apply --layout-vertical;
+        padding-top: 32px;
+      }
+
+      section-body {
+        @apply --layout-horizontal;
+      }
+
+      section-text {
         @apply --layout-vertical;
       }
 
@@ -34,7 +43,14 @@
       section-paragraph {
         padding-bottom: 8px;
       }
+
+      @media (max-width: 650px) {
+        section-body {
+          @apply --layout-vertical;
+        }
+      }
     </style>
+
     <article-subtitle>[[sampleData.subtitle]]</article-subtitle>
     <article-title> [[sampleData.title]]</article-title>
     <lds-article-image-slideshow images="[[sampleData.images]]">
@@ -45,10 +61,16 @@
           <section-subheading>[[section.subheading]]</section-subheading>
         </template>
         <section-body>
-          <template is="dom-repeat" items="[[section.paragraphs]]" as="paragraph">
-            <section-paragraph>[[paragraph.text]]
-            </section-paragraph>
+          <section-text>
+            <template is="dom-repeat" items="[[section.paragraphs]]" as="paragraph">
+              <section-paragraph>[[paragraph.text]]
+              </section-paragraph>
+            </template>
+          </section-text>
+          <template is="dom-if" if="[[section.video]]">
+            <lds-article-video video="[[section.video]]">
           </template>
+          </lds-article-video>
         </section-body>
       </template>
     </article-body>

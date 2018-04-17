@@ -1,0 +1,61 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+
+<link rel="import" href="lds-article-image-slideshow.html">
+<dom-module id="lds-article-video">
+  <template>
+    <style>
+      :host {
+        @apply --layout-horizontal;
+        @apply --layout-end-justified;
+        @apply --layout-center;
+      }
+
+      video-body {
+        @apply --layout-vertical;
+        max-width: 300px;
+        padding-left: 16px;
+      }
+
+      video-caption {
+        border-bottom: 1px solid var(--app-neon-color);
+        padding-bottom: 16px;
+      }
+
+      video-title {
+        @apply --paper-font-subhead;
+        font-weight: 600;
+      }
+
+      video-detials {
+        padding: 8px;
+        @apply --layout-vertical;
+
+      }
+
+      @media (max-width: 650px) {
+        video-body {
+          padding-left: 0;
+        }
+        :host {
+          @apply --layout-vertical;
+        }
+      }
+
+      }
+    </style>
+    <video-body>
+      <iframe src="[[video.videoUrl]]" frameborder="0" allowfullscreen></iframe>
+      <video-detials>
+        <video-title>
+          [[video.title]]
+        </video-title>
+        <video-caption>
+          [[video.caption]]
+        </video-caption>
+      </video-detials>
+      </video-bocy>
+  </template>
+  <script src="lds-article-video.js"></script>
+  < /dom-module>
